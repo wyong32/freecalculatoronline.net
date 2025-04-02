@@ -149,8 +149,8 @@ body {
 }
 
 .hero-content:hover {
-    transform: translateY(-5px);
-    /* animation: fadeInUp 1s ease-out; */
+    /* transform: translateY(-5px);
+     animation: fadeInUp 1s ease-out; */
 }
 
 @keyframes fadeInUp {
