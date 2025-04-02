@@ -48,7 +48,7 @@ function updateInputFields(shape) {
         selectedField.style.display = 'grid';
         // 重置所有输入字段
         selectedField.querySelectorAll('input[type="number"]').forEach(input => {
-            input.value = '';
+            // input.value = '';
             input.classList.remove('error');
         });
 
@@ -156,11 +156,16 @@ function calculateResults() {
 }
 
 function updateResultDisplay(results) {
-    document.getElementById('result').style.display = 'block';
+    // document.getElementById('result').style.display = 'block';
     document.getElementById('totalArea').textContent = `${results.area} square ${results.unit}`;
     document.getElementById('asphaltNeeded').textContent = `${results.totalAsphalt} tonnes`;
     document.getElementById('materialCost').textContent = `￥${results.materialCost}`;
     document.getElementById('totalCost').textContent = `$${results.totalCost}`;
+
+    // document.getElementById('totalArea').textContent = `${results.area} m²`;  // 使用平方米符号
+    // document.getElementById('asphaltNeeded').textContent = `${results.totalAsphalt} t`;  // 使用吨的缩写
+    // document.getElementById('materialCost').textContent = `CN¥${results.materialCost}`;  // 使用人民币标准符号
+    // document.getElementById('totalCost').textContent = `USD$${results.totalCost}`;
 }
 
 function saveResults(results) {

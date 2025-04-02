@@ -6,23 +6,200 @@
     <meta name="description" content="Asphalt Calculator helps you accurately estimate asphalt road paving costs. Compare asphalt repair and concrete repair costs. Start using our professional tool！">
     <link rel="canonical" href="https://freecalculatoronline.net">
     <title>Asphalt Calculator-asphalt driveway cost calculator</title>
-    <link rel="icon" type="image/x-icon" href="images/asphalt driveway-favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <meta name="keywords" content="asphalt calculator, asphalt driveway cost calculator, asphalt tonnage, asphalt tonnage calculator">
 </head>
 <body>
     <nav class="main-nav">
+        <div class="logo">
+            <img src="images//logo.png" alt="">
+            Asphalt Calculator
+        </div>
         <div class="nav-container">
             <div class="nav-left">
-                <a href="index.html" class="nav-item">Home</a>
+                <a href="index.html" class="nav-item active">Home</a>
                 <a href="articles.html" class="nav-item">Articles</a>
                 <a href="contact.html" class="nav-item">Contact Us</a>
             </div>
         </div>
     </nav>
     <div class="hero">
-        <div class="hero-content">
-            <h1>Asphalt Calculator</h1>
+        <div class="wrap">
+            <div class="hero-content">
+                <div class="calculator-container">
+                    <div class="control-panel">
+                        <div class="panel-section">
+                            <div class="panel-title">Asphalt Calculator</div>
+                            <div class="panel-title">Settings Unit Selection</div>
+                            <div class="button-group">
+                                <button class="control-btn active" data-unit="metric">Metric</button>
+                                <button class="control-btn" data-unit="imperial">Imperial</button>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-section">
+                            <div class="panel-title">Asphalt Calculator</div>
+                            <div class="panel-title">Paving Shape</div>
+                            <div class="button-group">
+                                <button class="control-btn active" data-shape="rectangle">Rectangle</button>
+                                <button class="control-btn" data-shape="circle">Circle</button>
+                                <button class="control-btn" data-shape="triangle">Triangle</button>
+                                <button class="control-btn" data-shape="trapezoid">Trapezoid</button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="rectangle-fields" class="dimension-fields">
+                        <div class="rectangle-fields-up">
+                            <div class="input-group">
+                                <label>Length (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="length" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Width (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="width" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Thickness (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="thickness" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="rectangle-fields-down">
+                            <div class="input-group">
+                                <label>Waste Factor (%)</label>
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                            </div>
+                            <div class="input-group">
+                                <label>Asphalt Density (tonnes/m³)</label>
+                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                            </div>
+                
+                            <div class="input-group">
+                                <label>Material Cost ($/tonne)</label>
+                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="circle-fields" class="dimension-fields" style="display: none;">
+                        <div class="rectangle-fields-up">
+                            <div class="input-group">
+                                <label>Radius (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="radius" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Thickness (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="thickness" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="rectangle-fields-down">
+                            <div class="input-group">
+                                <label>Waste Factor (%)</label>
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                            </div>
+                            <div class="input-group">
+                                <label>Asphalt Density (tonnes/m³)</label>
+                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                            </div>
+                
+                            <div class="input-group">
+                                <label>Material Cost ($/tonne)</label>
+                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div id="triangle-fields" class="dimension-fields" style="display: none;">
+                        <div class="rectangle-fields-up">
+                            <div class="input-group">
+                                <label>Base (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="base" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Height (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="height" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Thickness (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="thickness" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="rectangle-fields-down">
+                            <div class="input-group">
+                                <label>Waste Factor (%)</label>
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                            </div>
+                
+                            <div class="input-group">
+                                <label>Asphalt Density (tonnes/m³)</label>
+                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                            </div>
+                            <div class="input-group">
+                                <label>Material Cost ($/tonne)</label>
+                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div id="trapezoid-fields" class="dimension-fields" style="display: none;">
+                        <div class="rectangle-fields-up">
+                            <div class="input-group">
+                                <label>Top Width (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="top" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Bottom Width (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="bottom" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Height (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="trapezoid-height" min="0" step="0.1">
+                            </div>
+                            <div class="input-group">
+                                <label>Thickness (<span class="unit-label">meters</span>)</label>
+                                <input type="number" id="thickness" min="0" step="0.01">
+                            </div>
+                        </div>
+                        <div class="rectangle-fields-down">
+                            <div class="input-group">
+                                <label>Waste Factor (%)</label>
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                            </div>
+                
+                            <div class="input-group">
+                                <label>Asphalt Density (tonnes/m³)</label>
+                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                            </div>
+                
+                            <div class="input-group">
+                                <label>Material Cost ($/tonne)</label>
+                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="calculate-btn">Calculate</button>
+                </div>
+            </div>
+    
+            <div id="result" class="results">
+                <h3>Results</h3>
+                <p><span>Total Area: </span><span id="totalArea">0</span></p>
+                <p><span>Asphalt Needed: </span><span id="asphaltNeeded">0</span></p>
+                <!-- <p><span>Material Cost: </span><span id="materialCost">0</span></p> -->
+                <p><span>Total Cost: </span><span id="totalCost">0</span></p>
+                <div class="parameter-annotations">
+                    <strong>* Default 5% waste factor accounts for typical material loss during paving</strong>
+                    <strong>* Standard asphalt density is 2.4 tonnes/m³ (varies by mix design)</strong>
+                    <strong>* Typical asphalt material cost is $600/tonne (adjust based on local market)</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+    <section class="welcom-section">
+        <div class="container">
             <h2>Professional Asphalt Calculator | Your Ultimate Tool for Precise Asphalt Calculations</h2>
             <p>Welcome to the most comprehensive Asphalt Calculator tool available online. Our professional Asphalt Calculator provides precise measurements and cost estimations for all your asphalt paving projects. Whether you're a contractor or property owner, our Asphalt Calculator ensures accurate results every time!</p>
             <div class="features">
@@ -31,162 +208,7 @@
                 <p>✅ Smart Asphalt Calculator for Cost-Effective Project Planning</p>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="calculator-container">
-            <div class="control-panel">
-                <div class="panel-section">
-                    <div class="panel-title">Asphalt Calculator Settings</div>
-                    <div class="panel-title">Unit Selection</div>
-                    <div class="button-group">
-                        <button class="control-btn active" data-unit="metric">Metric</button>
-                        <button class="control-btn" data-unit="imperial">Imperial</button>
-                    </div>
-                </div>
-                
-                <div class="panel-section">
-                    <div class="panel-title">Paving Shape</div>
-                    <div class="button-group">
-                        <button class="control-btn active" data-shape="rectangle">Rectangle</button>
-                        <button class="control-btn" data-shape="circle">Circle</button>
-                        <button class="control-btn" data-shape="triangle">Triangle</button>
-                        <button class="control-btn" data-shape="trapezoid">Trapezoid</button>
-                    </div>
-                </div>
-            </div>
-    
-            <div id="rectangle-fields" class="dimension-fields">
-                <div class="input-group">
-                    <label>Length (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="length" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Width (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="width" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Thickness (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="thickness" min="0" step="0.01">
-                </div>
-                <div class="input-group">
-                    <label>Waste Factor (%)</label>
-                    <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
-                </div>
-    
-                <div class="input-group">
-                    <label>Asphalt Density (tonnes/m³)</label>
-                    <input type="number" id="density" min="0" step="0.1" value="2.4">
-                </div>
-    
-                <div class="input-group">
-                    <label>Material Cost ($/tonne)</label>
-                    <input type="number" id="materialCost" min="0" step="1" value="600">
-                </div>
-            </div>
-    
-            <div id="circle-fields" class="dimension-fields" style="display: none;">
-                <div class="input-group">
-                    <label>Radius (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="radius" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Thickness (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="thickness" min="0" step="0.01">
-                </div>
-    
-                <div class="input-group">
-                    <label>Waste Factor (%)</label>
-                    <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
-                </div>
-    
-                <div class="input-group">
-                    <label>Asphalt Density (tonnes/m³)</label>
-                    <input type="number" id="density" min="0" step="0.1" value="2.4">
-                </div>
-    
-                <div class="input-group">
-                    <label>Material Cost ($/tonne)</label>
-                    <input type="number" id="materialCost" min="0" step="1" value="600">
-                </div>
-            </div>
-    
-            <div id="triangle-fields" class="dimension-fields" style="display: none;">
-                <div class="input-group">
-                    <label>Base (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="base" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Height (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="height" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Thickness (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="thickness" min="0" step="0.01">
-                </div>
-    
-                <div class="input-group">
-                    <label>Waste Factor (%)</label>
-                    <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
-                </div>
-    
-                <div class="input-group">
-                    <label>Asphalt Density (tonnes/m³)</label>
-                    <input type="number" id="density" min="0" step="0.1" value="2.4">
-                </div>
-    
-                <div class="input-group">
-                    <label>Material Cost ($/tonne)</label>
-                    <input type="number" id="materialCost" min="0" step="1" value="600">
-                </div>
-            </div>
-    
-            <div id="trapezoid-fields" class="dimension-fields" style="display: none;">
-                <div class="input-group">
-                    <label>Top Width (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="top" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Bottom Width (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="bottom" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Height (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="trapezoid-height" min="0" step="0.1">
-                </div>
-                <div class="input-group">
-                    <label>Thickness (<span class="unit-label">meters</span>)</label>
-                    <input type="number" id="thickness" min="0" step="0.01">
-                </div>
-    
-                <div class="input-group">
-                    <label>Waste Factor (%)</label>
-                    <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
-                </div>
-    
-                <div class="input-group">
-                    <label>Asphalt Density (tonnes/m³)</label>
-                    <input type="number" id="density" min="0" step="0.1" value="2.4">
-                </div>
-    
-                <div class="input-group">
-                    <label>Material Cost ($/tonne)</label>
-                    <input type="number" id="materialCost" min="0" step="1" value="600">
-                </div>
-            </div>
-            <button class="calculate-btn">Calculate</button>
-        
-        </div>
-    </div>
-
-    <div id="result" class="results" style="display: none;">
-        <h3>Results</h3>
-        <p><span>Total Area: </span><span id="totalArea"></span></p>
-        <p><span>Asphalt Needed: </span><span id="asphaltNeeded"></span></p>
-        <p><span>Material Cost: </span><span id="materialCost"></span></p>
-        <p><span>Total Cost: </span><span id="totalCost"></span></p>
-    </div>
-
-    <script src="script.js"></script>
+    </section>
 
     <section class="article-section">
     <div class="container">
