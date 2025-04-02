@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# 禁止访问特定目录
+Disallow: /images/
+
+# 网站地图位置
+Sitemap: https://example.com/sitemap.xml
