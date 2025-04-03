@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asphalt Calculator helps you accurately estimate asphalt road paving costs. Compare asphalt repair and concrete repair costs. Start using our professional tool！">
-    <link rel="canonical" href="https://freecalculatoronline.net">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Asphalt Calculator helps you accurately estimate asphalt road paving costs. Compare asphalt repair and concrete repair costs. Start using our professional tool！" />
+    <meta name="keywords" content="asphalt calculator, asphalt driveway cost calculator, asphalt tonnage, asphalt tonnage calculator" />
+    <link rel="canonical" href="https://freecalculatoronline.net" />
     <title>Asphalt Calculator-asphalt driveway cost calculator</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="keywords" content="asphalt calculator, asphalt driveway cost calculator, asphalt tonnage, asphalt tonnage calculator">
+    <link rel="canonical" href="https://freecalculatoronline.net">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    
 </head>
+
 <body>
     <nav class="main-nav">
         <div class="logo">
-            <img src="images//logo.png" alt="Asphalt calculator logo">
+            <img src="images/logo.png" alt="Asphalt calculator logo" />
             <h1>Asphalt Calculator</h1>
         </div>
         <div class="nav-container">
-            <div class="nav-left">
+            <nav class="nav-left">
                 <a href="index.html" class="nav-item active">Home</a>
                 <a href="articles.html" class="nav-item">Articles</a>
                 <a href="contact.html" class="nav-item">Contact Us</a>
-            </div>
+            </nav>
         </div>
     </nav>
     <div class="hero">
@@ -33,364 +37,592 @@
                             <div class="panel-title">Asphalt Calculator</div>
                             <div class="panel-title">Settings Unit Selection</div>
                             <div class="button-group">
-                                <button class="control-btn active" data-unit="metric">Metric</button>
-                                <button class="control-btn" data-unit="imperial">Imperial</button>
+                                <button class="control-btn active" data-unit="metric">
+                                    Metric
+                                </button>
+                                <button class="control-btn" data-unit="imperial">
+                                    Imperial
+                                </button>
                             </div>
                         </div>
-                        
                         <div class="panel-section">
                             <div class="panel-title">Asphalt Calculator</div>
                             <div class="panel-title">Paving Shape</div>
                             <div class="button-group">
-                                <button class="control-btn active" data-shape="rectangle">Rectangle</button>
-                                <button class="control-btn" data-shape="circle">Circle</button>
-                                <button class="control-btn" data-shape="triangle">Triangle</button>
-                                <button class="control-btn" data-shape="trapezoid">Trapezoid</button>
+                                <button class="control-btn active" data-shape="rectangle">
+                                    Rectangle
+                                </button>
+                                <button class="control-btn" data-shape="circle">
+                                    Circle
+                                </button>
+                                <button class="control-btn" data-shape="triangle">
+                                    Triangle
+                                </button>
+                                <button class="control-btn" data-shape="trapezoid">
+                                    Trapezoid
+                                </button>
                             </div>
                         </div>
                     </div>
-    
+
                     <div id="rectangle-fields" class="dimension-fields">
                         <div class="rectangle-fields-up">
                             <div class="input-group">
                                 <label>Length (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="length" min="0" step="0.1">
+                                <input type="number" id="length" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Width (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="width" min="0" step="0.1">
+                                <input type="number" id="width" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Thickness (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="thickness" min="0" step="0.01">
+                                <input type="number" id="thickness" min="0" step="0.01" />
                             </div>
                         </div>
                         <div class="rectangle-fields-down">
                             <div class="input-group">
                                 <label>Waste Factor (%)</label>
-                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5" />
                             </div>
                             <div class="input-group">
                                 <label>Asphalt Density (tonnes/m³)</label>
-                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                                <input type="number" id="density" min="0" step="0.1" value="2.4" />
                             </div>
-                
+
                             <div class="input-group">
                                 <label>Material Cost ($/tonne)</label>
-                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                                <input type="number" id="materialCost" min="0" step="1" value="600" />
                             </div>
                         </div>
                     </div>
-                    <div id="circle-fields" class="dimension-fields" style="display: none;">
+                    <div id="circle-fields" class="dimension-fields" style="display: none">
                         <div class="rectangle-fields-up">
                             <div class="input-group">
                                 <label>Radius (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="radius" min="0" step="0.1">
+                                <input type="number" id="radius" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Thickness (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="thickness" min="0" step="0.01">
+                                <input type="number" id="thickness" min="0" step="0.01" />
                             </div>
                         </div>
                         <div class="rectangle-fields-down">
                             <div class="input-group">
                                 <label>Waste Factor (%)</label>
-                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5" />
                             </div>
                             <div class="input-group">
                                 <label>Asphalt Density (tonnes/m³)</label>
-                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                                <input type="number" id="density" min="0" step="0.1" value="2.4" />
                             </div>
-                
+
                             <div class="input-group">
                                 <label>Material Cost ($/tonne)</label>
-                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                                <input type="number" id="materialCost" min="0" step="1" value="600" />
                             </div>
                         </div>
                     </div>
-            
-                    <div id="triangle-fields" class="dimension-fields" style="display: none;">
+
+                    <div id="triangle-fields" class="dimension-fields" style="display: none">
                         <div class="rectangle-fields-up">
                             <div class="input-group">
                                 <label>Base (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="base" min="0" step="0.1">
+                                <input type="number" id="base" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Height (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="height" min="0" step="0.1">
+                                <input type="number" id="height" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Thickness (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="thickness" min="0" step="0.01">
+                                <input type="number" id="thickness" min="0" step="0.01" />
                             </div>
                         </div>
                         <div class="rectangle-fields-down">
                             <div class="input-group">
                                 <label>Waste Factor (%)</label>
-                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5" />
                             </div>
-                
+
                             <div class="input-group">
                                 <label>Asphalt Density (tonnes/m³)</label>
-                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                                <input type="number" id="density" min="0" step="0.1" value="2.4" />
                             </div>
                             <div class="input-group">
                                 <label>Material Cost ($/tonne)</label>
-                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                                <input type="number" id="materialCost" min="0" step="1" value="600" />
                             </div>
                         </div>
                     </div>
-            
-                    <div id="trapezoid-fields" class="dimension-fields" style="display: none;">
+
+                    <div id="trapezoid-fields" class="dimension-fields" style="display: none">
                         <div class="rectangle-fields-up">
                             <div class="input-group">
                                 <label>Top Width (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="top" min="0" step="0.1">
+                                <input type="number" id="top" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Bottom Width (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="bottom" min="0" step="0.1">
+                                <input type="number" id="bottom" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Height (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="trapezoid-height" min="0" step="0.1">
+                                <input type="number" id="trapezoid-height" min="0" step="0.1" />
                             </div>
                             <div class="input-group">
                                 <label>Thickness (<span class="unit-label">meters</span>)</label>
-                                <input type="number" id="thickness" min="0" step="0.01">
+                                <input type="number" id="thickness" min="0" step="0.01" />
                             </div>
                         </div>
                         <div class="rectangle-fields-down">
                             <div class="input-group">
                                 <label>Waste Factor (%)</label>
-                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5">
+                                <input type="number" id="wasteFactor" min="0" step="0.1" value="5" />
                             </div>
-                
+
                             <div class="input-group">
                                 <label>Asphalt Density (tonnes/m³)</label>
-                                <input type="number" id="density" min="0" step="0.1" value="2.4">
+                                <input type="number" id="density" min="0" step="0.1" value="2.4" />
                             </div>
-                
+
                             <div class="input-group">
                                 <label>Material Cost ($/tonne)</label>
-                                <input type="number" id="materialCost" min="0" step="1" value="600">
+                                <input type="number" id="materialCost" min="0" step="1" value="600" />
                             </div>
                         </div>
                     </div>
                     <button class="calculate-btn">Calculate</button>
                 </div>
             </div>
-    
+
             <div id="result" class="results">
-                <h3>Results</h3>
+                <h2>Results</h2>
                 <p><span>Total Area: </span><span id="totalArea">0</span></p>
                 <p><span>Asphalt Needed: </span><span id="asphaltNeeded">0</span></p>
                 <!-- <p><span>Material Cost: </span><span id="materialCost">0</span></p> -->
                 <p><span>Total Cost: </span><span id="totalCost">0</span></p>
                 <div class="parameter-annotations">
-                    <strong>* Default 5% waste factor accounts for typical material loss during paving</strong>
-                    <strong>* Standard asphalt density is 2.4 tonnes/m³ (varies by mix design)</strong>
-                    <strong>* Typical asphalt material cost is $600/tonne (adjust based on local market)</strong>
+                    <strong>* Default 5% waste factor accounts for typical material loss
+                        during paving</strong>
+                    <strong>* Standard asphalt density is 2.4 tonnes/m³ (varies by mix
+                        design)</strong>
+                    <strong>* Typical asphalt material cost is $600/tonne (adjust based on
+                        local market)</strong>
                 </div>
             </div>
         </div>
     </div>
-    
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 
     <section class="welcom-section">
         <div class="container">
-            <h2>Professional Asphalt Calculator | Your Ultimate Tool for Precise Asphalt Calculations</h2>
-            <p>Welcome to the most comprehensive Asphalt Calculator tool available online. Our professional Asphalt Calculator provides precise measurements and cost estimations for all your asphalt paving projects. Whether you're a contractor or property owner, our Asphalt Calculator ensures accurate results every time!</p>
-            <div class="features">
-                <p>✅ Professional Asphalt Calculator for Precise Material Estimation</p>
-                <p>✅ Advanced Asphalt Calculator with Multiple Shape Options</p>
-                <p>✅ Smart Asphalt Calculator for Cost-Effective Project Planning</p>
-            </div>
+            <h2>
+                Professional Asphalt Calculator | Your Ultimate Tool for Precise
+                Asphalt Calculations
+            </h2>
+            <p>
+                Welcome to the most comprehensive Asphalt Calculator tool available
+                online. Our professional Asphalt Calculator provides precise
+                measurements and cost estimations for all your asphalt paving
+                projects. Whether you're a contractor or property owner, our Asphalt
+                Calculator ensures accurate results every time!
+            </p>
+            <ul class="features">
+                <li>
+                    <p>
+                        ✅ Professional Asphalt Calculator for Precise Material Estimation
+                    </p>
+                </li>
+                <li>
+                    <p>✅ Advanced Asphalt Calculator with Multiple Shape Options</p>
+                </li>
+                <li>
+                    <p>
+                        ✅ Smart Asphalt Calculator for Cost-Effective Project Planning
+                    </p>
+                </li>
+            </ul>
         </div>
     </section>
 
     <section class="article-section">
-    <div class="container">
-        <article class="calculator-article">
-            <h2>What is an Asphalt Calculator?</h2>
-            <p>An asphalt calculator is a tool that helps users quickly estimate asphalt  tonnage and asphalt cost needed for paving projects. By inputting parameters such as asphalt area and asphalt thickness, you can easily determine the required asphalt tonnage and asphalt cost, avoiding material waste or shortage.</p>
+        <div class="container">
+            <article class="calculator-article">
+                <div class="what-calculator">
+                    <h2>What is an Asphalt Calculator?</h2>
+                    <p>
+                        An asphalt calculator is a tool that helps users quickly estimate
+                        asphalt tonnage and asphalt cost needed for paving projects. By
+                        inputting parameters such as asphalt area and asphalt thickness,
+                        you can easily determine the required asphalt tonnage and asphalt
+                        cost, avoiding material waste or shortage.
+                    </p>
+                </div>
+                <div class="step-guide">
+                    <h2>How to Use the Asphalt Tonnage cost Calculator</h2>
+                    <div class="step">
+                        <h3>Step 1: Input Measurements into the Asphalt Calculator</h3>
+                        <p>
+                            Begin by entering your project dimensions into our Asphalt
+                            Calculator. The Asphalt calculator supports various shapes
+                            including rectangle, circle, triangle, and trapezoid for maximum
+                            flexibility.
+                        </p>
+                        <div class="formula">
+                            <p>
+                                Formula: Area (square feet) = Length (feet) × Width (feet)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <h3>Step 2: Choose the Appropriate Asphalt Thickness</h3>
+                        <p>
+                            Select the thickness based on your project type. Common
+                            thicknesses include 1 inch, 2 inches, or 3 inches.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>Step 3: Convert Asphalt Thickness to Feet</h3>
+                        <p>
+                            Since asphalt calculations are typically done in feet, convert
+                            the thickness from inches to feet (divide by 12).
+                        </p>
+                        <div class="example">
+                            <p>Example: 3 inches = 3 / 12 = 0.25 feet</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <h3>Step 4: Calculate Asphalt Volume</h3>
+                        <p>Use the following formula to calculate volume:</p>
+                        <div class="formula">
+                            <p>
+                                Formula: Volume (cubic feet) = Area (square feet) × Thickness
+                                (feet)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <h3>Step 5: Convert to Asphalt Tonnage</h3>
+                        <p>
+                            The key to using the asphalt calculator is converting Asphalt
+                            volume to Asphalt tonnage. Asphalt has a density of
+                            approximately 145 pounds per cubic foot.
+                        </p>
+                        <div class="formula">
+                            <p>
+                                Formula: Asphalt Tonnage = Asphalt Volume (cubic feet) × 145 ÷
+                                2000
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculation-example">
+                    <h2>Calculation Example</h2>
+                    <p>
+                        For an area of 30 feet × 40 feet with a thickness of 3 inches:
+                    </p>
+                    <ul>
+                        <li>Area = 30 × 40 = 1200 square feet</li>
+                        <li>Thickness (feet) = 3 / 12 = 0.25 feet</li>
+                        <li>Volume = 1200 × 0.25 = 300 cubic feet</li>
+                        <li>Tonnage = 300 × 145 ÷ 2000 = 21.75 tons</li>
+                    </ul>
+                </div>
+                <div class="benefits">
+                    <h2>Why Choose an Asphalt Calculator?</h2>
+                    <ul>
+                        <li>
+                            <strong>Precise Calculations:</strong> Avoid material waste or
+                            shortage.
+                        </li>
+                        <li>
+                            <strong>Quick and Convenient:</strong> Get results instantly by
+                            inputting data.
+                        </li>
+                        <li>
+                            <strong>Multiple Unit Support:</strong> Many asphalt calculators
+                            offer convenient conversion from square feet to tonnage.
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
 
-            <h2>How to Use the Asphalt Tonnage cost Calculator</h2>
-            <div class="step-guide">
-                <div class="step">
-                    <h3>Step 1: Input Measurements into the Asphalt Calculator</h3>
-                    <p>Begin by entering your project dimensions into our Asphalt Calculator. The Asphalt calculator supports various shapes including rectangle, circle, triangle, and trapezoid for maximum flexibility.</p>
-                    <div class="formula">
-                        <p>Formula: Area (square feet) = Length (feet) × Width (feet)</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <h3>Step 2: Choose the Appropriate  Asphalt Thickness</h3>
-                    <p>Select the thickness based on your project type. Common thicknesses include 1 inch, 2 inches, or 3 inches.</p>
-                </div>
-                <div class="step">
-                    <h3>Step 3: Convert Asphalt Thickness to Feet</h3>
-                    <p>Since asphalt calculations are typically done in feet, convert the thickness from inches to feet (divide by 12).</p>
-                    <div class="example">
-                        <p>Example: 3 inches = 3 / 12 = 0.25 feet</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <h3>Step 4: Calculate Asphalt Volume</h3>
-                    <p>Use the following formula to calculate volume:</p>
-                    <div class="formula">
-                        <p>Formula: Volume (cubic feet) = Area (square feet) × Thickness (feet)</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <h3>Step 5: Convert to Asphalt Tonnage</h3>
-                    <p>The key to using the asphalt calculator is converting Asphalt volume to Asphalt tonnage. Asphalt has a density of approximately 145 pounds per cubic foot.</p>
-                    <div class="formula">
-                        <p>Formula: Asphalt Tonnage = Asphalt Volume (cubic feet) × 145 ÷ 2000</p>
-                    </div>
-                </div>
-            </div>
-            <div class="calculation-example">
-                <h3>Calculation Example</h3>
-                <p>For an area of 30 feet × 40 feet with a thickness of 3 inches:</p>
-                <ul>
-                    <li>Area = 30 × 40 = 1200 square feet</li>
-                    <li>Thickness (feet) = 3 / 12 = 0.25 feet</li>
-                    <li>Volume = 1200 × 0.25 = 300 cubic feet</li>
-                    <li>Tonnage = 300 × 145 ÷ 2000 = 21.75 tons</li>
-                </ul>
-            </div>
-            <div class="benefits">
-                <h2>Why Choose an Asphalt Calculator?</h2>
-                <ul>
-                    <li><strong>Precise Calculations:</strong> Avoid material waste or shortage.</li>
-                    <li><strong>Quick and Convenient:</strong> Get results instantly by inputting data.</li>
-                    <li><strong>Multiple Unit Support:</strong> Many asphalt calculators offer convenient conversion from square feet to tonnage.</li>
-                </ul>
-            </div>
-        </article>
-    </div>
-</section>
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>
+                        1. How can an Asphalt Calculator help with Asphalt driveway
+                        maintenance costs?
+                    </h3>
+                    <div class="faq-content">
+                        <p>
+                            A professional Asphalt Calculator is invaluable when planning
+                            Asphalt driveway maintenance. Our advanced Asphalt Calculator
+                            helps you estimate materials needed and associated costs
+                            accurately. Using an Asphalt Calculator ensures you can budget
+                            effectively for maintenance work.
+                        </p>
 
-<section class="faq-section">
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <h3>1. How can an Asphalt Calculator help with Asphalt driveway maintenance costs?</h3>
-                <div class="faq-content">
-                    <p>A professional Asphalt Calculator is invaluable when planning Asphalt driveway maintenance. Our advanced Asphalt Calculator helps you estimate materials needed and associated costs accurately. Using an Asphalt Calculator ensures you can budget effectively for maintenance work.</p>
-                    
-                    <div class="faq-section">
-                        <h4>Key Benefits of Using an Asphalt Calculator for Maintenance Planning:</h4>
-                        <p>The Asphalt Calculator helps you account for various factors including age, size, condition, and usage patterns. Our comprehensive Asphalt Calculator provides detailed cost breakdowns for better planning.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>1. Age and Condition of the Driveway:</h4>
-                        <p>Older driveways require more frequent maintenance. Asphalt Driveway typically lasts 15-20 years, but over time, exposure to weather, traffic, and the natural settling of the ground can lead to cracks, potholes, and surface wear. If the Asphalt driveway is in poor condition, a full resurfacing might be necessary, which is more expensive than regular sealcoating or patching.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>2. Asphalt Driveway Size:</h4>
-                        <p>The larger the Asphalt driveway, the more Asphalt materials and labor will be needed for maintenance. For instance, sealcoating costs are usually priced by the square foot, so a larger driveway will naturally incur higher Asphalt costs. Similarly, Asphalt patching and crack repair may also vary based on the area that requires attention.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>3. Traffic Volume and Type:</h4>
-                        <p>Driveways that experience heavy traffic, particularly from large vehicles like trucks or RVs, will degrade faster and require more frequent repairs. High traffic areas might need additional reinforcement or thicker layers of asphalt, raising maintenance Asphalt costs.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>4. Local Climate:</h4>
-                        <p>Extreme weather conditions, such as hot summers or harsh winters, can accelerate asphalt deterioration. Freezing and thawing cycles can cause cracks to expand, while UV rays can degrade the surface. In regions with extreme temperatures, more frequent Asphalt sealing and Asphalt repairs may be required.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>5. Maintenance Schedule:</h4>
-                        <p>Regular maintenance, such as sealcoating every 2-3 years and addressing cracks early, can prevent costly repairs. Neglecting minor issues can lead to larger problems, significantly increasing future maintenance expenses.</p>
-                    </div>
-                    
-                    <p>By factoring in these elements, you can better plan for the ongoing costs associated with maintaining an asphalt driveway.choosing a professional asphalt calculator will help control asphalt costs. Come and use our asphalt calculator!</p>
-                </div>
-            </div>
+                        <div class="faq-section">
+                            <h4>
+                                Key Benefits of Using an Asphalt Calculator for Maintenance
+                                Planning:
+                            </h4>
+                            <p>
+                                The Asphalt Calculator helps you account for various factors
+                                including age, size, condition, and usage patterns. Our
+                                comprehensive Asphalt Calculator provides detailed cost
+                                breakdowns for better planning.
+                            </p>
+                        </div>
 
-            <div class="faq-item">
-                <h3>2. How significant is the cost difference between asphalt driveway resurfacing and repair?</h3>
-                <div class="faq-content">
-                    <p>The cost difference between asphalt driveway resurfacing and repair can be quite significant, as the two services address different levels of damage and require varying amounts of materials and labor.</p>
-                    
-                    <div class="faq-section">
-                        <h4>1. Asphalt driveway Resurfacing:</h4>
-                        <p>Resurfacing involves applying a new layer of asphalt over the existing surface to restore its appearance and functionality. This process is typically recommended when the driveway has widespread damage, such as extensive cracks, potholes, or significant wear. The cost of resurfacing is higher because it requires more materials and labor. On average, resurfacing an asphalt driveway can cost between $2 to $5 per square foot, depending on factors like the size of the driveway, local labor rates, and the condition of the underlying surface.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>2. Asphalt driveway Repair:</h4>
-                        <p>Repairing an asphalt driveway is a more targeted solution, usually addressing smaller issues like isolated cracks, potholes, or small areas of damage. The cost of repair is considerably lower than resurfacing because it involves less material and labor. Crack sealing might cost around $1 to $2 per linear foot, while pothole repairs can range from $50 to $500, depending on the severity and size of the damage. The costs are more affordable since repairs are done on a case-by-case basis and don't require a complete overhaul of the driveway.</p>
-                    </div>
-                    
-                    <div class="faq-section">
-                        <h4>Cost Difference:</h4>
-                        <p>In general,Asphalt driveway resurfacing is a more expensive option, typically ranging from $1,500 to $4,000 for an average-sized driveway, while repairs usually cost a few hundred dollars, depending on the extent of the damage. The cost of resurfacing is higher because it involves a larger scope of work, including the removal and replacement of the surface layer, whereas repairs focus on localized fixes.</p>
-                    </div>
-                    
-                    <p>In summary, Asphalt driveway resurfacing is a more comprehensive, long-term solution, while repair is more cost-effective for addressing minor damage. The decision between the two depends on the overall condition of the driveway and the desired longevity of the repair or resurfacing.choosing a professional asphalt calculator will help control asphalt costs. Come and use our asphalt calculator!</p>
-                </div>
-            </div>
+                        <div class="faq-section">
+                            <h4>1. Age and Condition of the Driveway:</h4>
+                            <p>
+                                Older driveways require more frequent maintenance. Asphalt
+                                Driveway typically lasts 15-20 years, but over time, exposure
+                                to weather, traffic, and the natural settling of the ground
+                                can lead to cracks, potholes, and surface wear. If the Asphalt
+                                driveway is in poor condition, a full resurfacing might be
+                                necessary, which is more expensive than regular sealcoating or
+                                patching.
+                            </p>
+                        </div>
 
-            <div class="faq-item">
-                <h3>3. How to estimate the cost of asphalt driveway resurfacing?</h3>
-                <div class="faq-content">
-                    <p>Estimating the cost of asphalt driveway resurfacing involves several key factors that can affect the final price. The most important considerations include the size of the driveway, the condition of the existing surface, local labor rates, and any additional services or repairs required.</p>
-                    
-                    <div class="faq-section">
-                        <h4>1. Measure the Size of the Asphalt Driveway:</h4>
-                        <p>Start by measuring the length and width of your Asphalt driveway to calculate its total area in square feet. Resurfacing costs are typically calculated per square foot, so knowing the exact size of your driveway is essential. For example, a 1,000-square-foot driveway will have a different cost than a 2,000-square-foot driveway.</p>
+                        <div class="faq-section">
+                            <h4>2. Asphalt Driveway Size:</h4>
+                            <p>
+                                The larger the Asphalt driveway, the more Asphalt materials
+                                and labor will be needed for maintenance. For instance,
+                                sealcoating costs are usually priced by the square foot, so a
+                                larger driveway will naturally incur higher Asphalt costs.
+                                Similarly, Asphalt patching and crack repair may also vary
+                                based on the area that requires attention.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>3. Traffic Volume and Type:</h4>
+                            <p>
+                                Driveways that experience heavy traffic, particularly from
+                                large vehicles like trucks or RVs, will degrade faster and
+                                require more frequent repairs. High traffic areas might need
+                                additional reinforcement or thicker layers of asphalt, raising
+                                maintenance Asphalt costs.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>4. Local Climate:</h4>
+                            <p>
+                                Extreme weather conditions, such as hot summers or harsh
+                                winters, can accelerate asphalt deterioration. Freezing and
+                                thawing cycles can cause cracks to expand, while UV rays can
+                                degrade the surface. In regions with extreme temperatures,
+                                more frequent Asphalt sealing and Asphalt repairs may be
+                                required.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>5. Maintenance Schedule:</h4>
+                            <p>
+                                Regular maintenance, such as sealcoating every 2-3 years and
+                                addressing cracks early, can prevent costly repairs.
+                                Neglecting minor issues can lead to larger problems,
+                                significantly increasing future maintenance expenses.
+                            </p>
+                        </div>
+
+                        <p>
+                            By factoring in these elements, you can better plan for the
+                            ongoing costs associated with maintaining an asphalt
+                            driveway.choosing a professional asphalt calculator will help
+                            control asphalt costs. Come and use our asphalt calculator!
+                        </p>
                     </div>
-                    
-                    <div class="faq-section">
-                        <h4>2. Assess the Condition of the Driveway:</h4>
-                        <p>If the current surface is severely damaged with large cracks, potholes, or structural issues, additional repair work may be needed before resurfacing. This could include crack sealing, patching, or even removal of damaged asphalt. The more repairs needed, the higher the overall cost will be.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>
+                        2. How significant is the cost difference between asphalt driveway
+                        resurfacing and repair?
+                    </h3>
+                    <div class="faq-content">
+                        <p>
+                            The cost difference between asphalt driveway resurfacing and
+                            repair can be quite significant, as the two services address
+                            different levels of damage and require varying amounts of
+                            materials and labor.
+                        </p>
+
+                        <div class="faq-section">
+                            <h4>1. Asphalt driveway Resurfacing:</h4>
+                            <p>
+                                Resurfacing involves applying a new layer of asphalt over the
+                                existing surface to restore its appearance and functionality.
+                                This process is typically recommended when the driveway has
+                                widespread damage, such as extensive cracks, potholes, or
+                                significant wear. The cost of resurfacing is higher because it
+                                requires more materials and labor. On average, resurfacing an
+                                asphalt driveway can cost between $2 to $5 per square foot,
+                                depending on factors like the size of the driveway, local
+                                labor rates, and the condition of the underlying surface.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>2. Asphalt driveway Repair:</h4>
+                            <p>
+                                Repairing an asphalt driveway is a more targeted solution,
+                                usually addressing smaller issues like isolated cracks,
+                                potholes, or small areas of damage. The cost of repair is
+                                considerably lower than resurfacing because it involves less
+                                material and labor. Crack sealing might cost around $1 to $2
+                                per linear foot, while pothole repairs can range from $50 to
+                                $500, depending on the severity and size of the damage. The
+                                costs are more affordable since repairs are done on a
+                                case-by-case basis and don't require a complete overhaul of
+                                the driveway.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>Cost Difference:</h4>
+                            <p>
+                                In general,Asphalt driveway resurfacing is a more expensive
+                                option, typically ranging from $1,500 to $4,000 for an
+                                average-sized driveway, while repairs usually cost a few
+                                hundred dollars, depending on the extent of the damage. The
+                                cost of resurfacing is higher because it involves a larger
+                                scope of work, including the removal and replacement of the
+                                surface layer, whereas repairs focus on localized fixes.
+                            </p>
+                        </div>
+
+                        <p>
+                            In summary, Asphalt driveway resurfacing is a more
+                            comprehensive, long-term solution, while repair is more
+                            cost-effective for addressing minor damage. The decision between
+                            the two depends on the overall condition of the driveway and the
+                            desired longevity of the repair or resurfacing.choosing a
+                            professional asphalt calculator will help control asphalt costs.
+                            Come and use our asphalt calculator!
+                        </p>
                     </div>
-                    
-                    <div class="faq-section">
-                        <h4>3. Consider the Thickness of the Resurfacing Layer:</h4>
-                        <p>Typically, a 1.5 to 2-inch thick layer of new asphalt is applied during resurfacing. If the driveway has significant wear, you may need a thicker layer, which will increase material costs. The thickness of the asphalt directly impacts the final price.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>
+                        3. How to estimate the cost of asphalt driveway resurfacing?
+                    </h3>
+                    <div class="faq-content">
+                        <p>
+                            Estimating the cost of asphalt driveway resurfacing involves
+                            several key factors that can affect the final price. The most
+                            important considerations include the size of the driveway, the
+                            condition of the existing surface, local labor rates, and any
+                            additional services or repairs required.
+                        </p>
+
+                        <div class="faq-section">
+                            <h4>1. Measure the Size of the Asphalt Driveway:</h4>
+                            <p>
+                                Start by measuring the length and width of your Asphalt
+                                driveway to calculate its total area in square feet.
+                                Resurfacing costs are typically calculated per square foot, so
+                                knowing the exact size of your driveway is essential. For
+                                example, a 1,000-square-foot driveway will have a different
+                                cost than a 2,000-square-foot driveway.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>2. Assess the Condition of the Driveway:</h4>
+                            <p>
+                                If the current surface is severely damaged with large cracks,
+                                potholes, or structural issues, additional repair work may be
+                                needed before resurfacing. This could include crack sealing,
+                                patching, or even removal of damaged asphalt. The more repairs
+                                needed, the higher the overall cost will be.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>3. Consider the Thickness of the Resurfacing Layer:</h4>
+                            <p>
+                                Typically, a 1.5 to 2-inch thick layer of new asphalt is
+                                applied during resurfacing. If the driveway has significant
+                                wear, you may need a thicker layer, which will increase
+                                material costs. The thickness of the asphalt directly impacts
+                                the final price.
+                            </p>
+                        </div>
+
+                        <div class="faq-section">
+                            <h4>4. Factor in Local Labor and Material Rates:</h4>
+                            <p>
+                                Labor and asphalt prices vary by location. Asphalt typically
+                                costs between $60 and $100 per ton, and labor rates range from
+                                $50 to $100 per hour. The final cost will depend on your
+                                region's market conditions.
+                            </p>
+                        </div>
+
+                        <p>
+                            On average, the cost of resurfacing a Asphalt driveway ranges
+                            from $2 to $5 per square foot. For a 1,000-square-foot Asphalt
+                            driveway, this could translate to $2,000 to $5,000 in total.
+                            Always get quotes from multiple contractors to ensure you're
+                            getting a fair price.choosing a professional asphalt calculator
+                            will help control asphalt costs. Come and use our asphalt
+                            calculator!
+                        </p>
                     </div>
-                    
-                    <div class="faq-section">
-                        <h4>4. Factor in Local Labor and Material Rates:</h4>
-                        <p>Labor and asphalt prices vary by location. Asphalt typically costs between $60 and $100 per ton, and labor rates range from $50 to $100 per hour. The final cost will depend on your region's market conditions.</p>
-                    </div>
-                    
-                    <p>On average, the cost of resurfacing a Asphalt driveway ranges from $2 to $5 per square foot. For a 1,000-square-foot Asphalt driveway, this could translate to $2,000 to $5,000 in total. Always get quotes from multiple contractors to ensure you're getting a fair price.choosing a professional asphalt calculator will help control asphalt costs. Come and use our asphalt calculator!</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>About Us</h3>
-                <p>We provide a professional Asphalt Calculator designed to deliver precise calculations for your construction projects. Our advanced Asphalt Calculator helps optimize budgets and improve construction efficiency.</p>
+                <h4>About Us</h4>
+                <p>
+                    We provide a professional Asphalt Calculator designed to deliver
+                    precise calculations for your construction projects. Our advanced
+                    Asphalt Calculator helps optimize budgets and improve construction
+                    efficiency.
+                </p>
             </div>
             <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>If you have any asphalt calculator questions or suggestions, please <a href="contact.html">contact us</a>.</p>
+                <h4>Contact Us</h4>
+                <p>
+                    If you have any asphalt calculator questions or suggestions, please
+                    <a href="contact.html">contact us</a>.
+                </p>
             </div>
             <div class="footer-section">
-                <h3>Follow Us</h3>
+                <h4>Follow Us</h4>
                 <div class="social-links">
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                         <span>Follow us on X</span>
                     </a>
                     <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+                        </svg>
                         <span>Subscribe on YouTube</span>
                     </a>
                 </div>
@@ -401,13 +633,16 @@
         </div>
     </footer>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNH98TEKB7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNH98TEKB7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
 
-  gtag('config', 'G-ZNH98TEKB7');
-</script>
+        gtag("config", "G-ZNH98TEKB7");
+    </script>
 </body>
+
 </html>
