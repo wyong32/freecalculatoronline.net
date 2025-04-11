@@ -689,7 +689,7 @@ ul{
 
 .article-content img{
     float: right;
-    width: 20rem;
+    max-width: 100%;
     height: auto;
     margin: 0 0 0.5rem 0.5rem;
     shape-outside: margin-box;
@@ -703,6 +703,14 @@ ul{
     text-align: justify;  /* 两端对齐使环绕效果更好 */
     overflow: auto;
     clear: none;
+}
+
+.article-content p a{
+    color: #666;
+}
+
+.article-content h3 a{
+    color: #2c3e50;
 }
 
 table {
